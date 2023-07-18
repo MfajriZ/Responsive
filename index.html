@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content=" width=device-width" />
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,800;1,100&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="#home">
+          <img
+            src="{% static 'img/logo-no-back-2@2x.png' %}"
+            alt="C-DIG LOGO"
+            class="logo"
+          />
+        </a>
+        <a href="#home">C-DIG</a>
+      </div>
+      <div class="navbar-last navbar-links">
+        <a href="#home">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Product
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="{% url 'builder' %}">Web-Builder</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Service
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="{% url 'web' %}">Web</a>
+            <a href="{% url 'IOT' %}">IOT</a>
+          </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="auth-links">
+        <form class="d-flex" id="authstyle">
+          {% if user.is_authenticated %}
+          <a
+            href="{% url 'profile' %}"
+            class="btn"
+            style="color: white; background-color: #fd5e14"
+            type="submit"
+            id="header-links"
+          >
+            Profile
+          </a>
+          <a
+            href="{% url 'logout' %}"
+            class="btn"
+            style="color: white; background-color: #fd5e14"
+            type="submit"
+            id="header-links"
+          >
+            Logout
+          </a>
+          {% else %}
+          <a
+            href="{% url 'register' %}"
+            class="btn"
+            style="color: white; background-color: #fd5e14"
+            type="submit"
+            id="header-links"
+          >
+            Create Account
+          </a>
+          <a
+            href="{% url 'login' %}"
+            class="btn"
+            style="color: white; background-color: #fd5e14; margin-left: 10px"
+            type="submit"
+            id="header-links"
+            >Log In</a
+          >
+          {% endif %}
+        </form>
+      </div>
+    </nav>
+    <div class="dekstop-26-parent">
+      <div class="desktop-21" id="home">
+        <div class="we-serve-web">
+          We serve Web development and IOT base Project to Solve obstacle your
+          business
+        </div>
+        <div class="desktop-21-item"></div>
+        <div class="desktop-21-inner"></div>
+        <img class="arrow-icon" alt="" src="{% static 'img/arrow-4.svg' %}" />
+
+        <div class="get-started">GET STARTED</div>
+        <div class="c-dig1">C-DIG</div>
+        <img
+          class="group-13-1"
+          alt=""
+          src="{% static 'img/group-13-1@2x.png' %}"
+        />
+
+        <div class="desktop-21-child1"></div>
+        <img
+          class="group-18-1"
+          alt=""
+          src="{% static 'img/group-18-1@2x.png' %}"
+        />
+
+        <img
+          class="group-19-1"
+          alt=""
+          src="{% static 'img/group-19-1@2x.png' %}"
+        />
+
+        <img
+          class="group-21-1"
+          alt=""
+          src="{% static 'img/group-21-1@2x.png' %}"
+        />
+
+        <img
+          class="group-264-1"
+          alt=""
+          src="{% static 'img/group-264-1@2x.png' %}"
+        />
+
+        <div class="div">2+</div>
+        <div class="div1">1+</div>
+        <div class="client-helped">Client helped</div>
+        <div class="project">Project</div>
+        <div class="div2">4.9/5</div>
+        <div class="average-review">Average Review</div>
+        <div class="we-have-the">We Have the best Web and IOT Solution</div>
+      </div>
+      <div class="dekstop-26" id="contact">
+        <img
+          class="group-265-1"
+          alt=""
+          src="{% static 'img/group-265-1@2x.png' %}"
+        />
+
+        <img
+          class="instagram-1-icon"
+          alt=""
+          src="{% static 'img/instagram-1@2x.png' %}"
+        />
+
+        <div class="cdig">cdig.id</div>
+        <div class="we-are-ardata">We Are C-DIG</div>
+        <div class="pt-ardata">PT . Central Digital International</div>
+        <div class="infoardatacoid">
+          @
+          <a
+            class="cdig4progmailcom"
+            href="mailto:cdig4pro@gmail.com"
+            target="_blank"
+          >
+            <span class="cdig4progmailcom1">cdig4pro@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="link-perusahaan">LINK PERUSAHAANN</div>
+        <div class="profil-ardata">PROFIL C-DIG</div>
+        <div class="portofolio">PORTOFOLIO</div>
+        <div class="semua-layanan">SEMUA LAYANAN</div>
+        <div class="hubungi-kami">HUBUNGI KAMI</div>
+        <div class="magang-internship">MAGANG INTERNSHIP</div>
+        <div class="lowongan-kerja">LOWONGAN KERJA</div>
+        <div class="dokumentasi-kerjasama">DOKUMENTASI KERJASAMA</div>
+        <div class="link-insight">LINK INSIGHT</div>
+        <div class="semua-artikel">SEMUA ARTIKEL</div>
+        <div class="web-landing">WEB & LANDING PAGE</div>
+        <div class="artikel-seo">ARTIKEL SEO</div>
+        <div class="social-media">SOCIAL MEDIA & ADS</div>
+        <div class="marketplace">MARKETPLACE</div>
+        <div class="bisnis-umkm">BISNIS & UMKM</div>
+      </div>
+      <div class="desktop-25">
+        <img
+          class="desktop-25-child"
+          alt=""
+          src="{% static 'img/rectangle-41.svg' %}"
+        />
+
+        <div class="desktop-25-item"></div>
+        <div class="meet-our-team" id="about">Meet Our Team</div>
+        <div class="desktop-25-inner"></div>
+        <div class="ellipse-div"></div>
+        <div class="rectangle-div"></div>
+        <div class="desktop-25-child1"></div>
+        <div class="desktop-25-child2"></div>
+        <img
+          class="vector-icon"
+          alt=""
+          src="{% static 'img/vector@2x.png' %}"
+        />
+
+        <img
+          class="vector-icon1"
+          alt=""
+          src="{% static 'img/vector1@2x.png' %}"
+        />
+
+        <div class="muhammad-fajri-zulfa-container">
+          <p class="muhammad-fajri-zulfa">Muhammad Fajri Zulfa</p>
+          <p class="our">
+            <i class="kahim201">Kahim’20</i>
+          </p>
+        </div>
+        <div class="muhammad-fajri-zulfa-container1">
+          <p class="muhammad-fajri-zulfa">Muhammad Fajri Zulfa</p>
+          <p class="our">
+            <i class="kahim201">ganteng/’20</i>
+          </p>
+        </div>
+        <div class="muhammad-fajri-zulfa-container2">
+          <p class="muhammad-fajri-zulfa">Muhammad Fajri Zulfa</p>
+          <p class="our">
+            <i class="kahim201">Advo’20</i>
+          </p>
+        </div>
+        <div class="desktop-25-child3"></div>
+        <img
+          class="vector-icon2"
+          alt=""
+          src="{% static 'img/vector@2x.png' %}"
+        />
+      </div>
+      <div class="desktop-24">
+        <div class="desktop-24-child"></div>
+        <div class="our-goals">OUR GOALS</div>
+        <div class="desktop-24-item"></div>
+        <div class="desktop-24-inner"></div>
+        <img
+          class="group-28-1"
+          alt=""
+          src="{% static 'img/group-28-1@2x.png' %}"
+        />
+        <div class="desktop-24-child1"></div>
+      </div>
+
+      <div class="desktop-22">
+        <img
+          class="group-29-1"
+          alt=""
+          src="{% static 'img/group-29-1@2x.png' %}"
+        />
+
+        <div class="desktop-22-child"></div>
+        <div class="our-services">
+          <p class="our">OUR</p>
+          <p class="our">SERVICES</p>
+        </div>
+        <div class="program-and-make">
+          program and make your project with us
+        </div>
+        <b class="internet-of-things">Internet of Things</b>
+        <div class="desktop-22-item"></div>
+        <img class="vector-icon3" alt="" src="{% static '/vector2.svg' %}" />
+
+        <img class="vector-icon4" alt="" src="{% static 'img/vector2.svg' %}" />
+
+        <img class="vector-icon5" alt="" src="{% static 'img/vector2.svg' %}" />
+
+        <img class="vector-icon6" alt="" src="{% static 'img/vector2.svg' %}" />
+
+        <img class="vector-icon7" alt="" src="{% static 'img/vector2.svg' %}" />
+
+        <img class="vector-icon8" alt="" src="{% static 'img/vector2.svg' %}" />
+
+        <img class="vector-icon9" alt="" src="{% static '/vector2.svg' %}" />
+
+        <img
+          class="vector-icon10"
+          alt=""
+          src="{% static 'img/vector2.svg' %}"
+        />
+
+        <b class="platform-developing">PLATFORM DEVELOPING</b>
+        <div class="get-free-consult">
+          get free consult then make and develop your dream page with us
+        </div>
+
+        <img
+          class="group-26-6"
+          alt=""
+          src="{% static 'img/group-26-6@2x.png' %}"
+        />
+
+        <img
+          class="group-22-2"
+          alt=""
+          src="{% static 'img/group-22-2@2x.png' %}"
+        />
+      </div>
+
+      <div class="desktop-23">
+        <div class="wrapper">
+          <div class="slides">
+            <span id="slide-1"></span>
+            <span id="slide-2"></span>
+
+            <div class="images">
+              <img src="{% static 'img/Desktop - 23.jpg' %}" />
+              <img src="{% static 'img/Desktop - 17.jpg' %}" />
+            </div>
+          </div>
+
+          <div class="navigation">
+            <a href="#slide-1">1</a>
+            <a href="#slide-2">2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
